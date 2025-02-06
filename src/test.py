@@ -140,13 +140,13 @@ if option != 'Scheme Code - Scheme Name':
         means=df1
         means.set_index('date', inplace=True)
         means.sort_index(inplace=True)
-        st.dataframe(means)
+        # st.dataframe(means)
         df_pct=means.pct_change(1260)            
-        st.dataframe(df_pct)
+        # st.dataframe(df_pct)
         df_pct['nav']+=1
 
         df_pct['cagr5']=(pow(df_pct['nav'],(1/5))-1)*100
-        st.dataframe(df_pct)
+        # st.dataframe(df_pct)
         #create a line chart in streamlit for df1
         # st.write(df1.dtypes)
         # st.dataframe(df1)
